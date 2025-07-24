@@ -20,7 +20,8 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-                .allowedOrigins("*")  // 실제 배포 시엔 프론트 주소로 제한하는 게 좋음
+        registry.addMapping("/**")  // 👈 이게 빠졌던 거야
+                .allowedOrigins("*")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*");
     }
