@@ -15,7 +15,7 @@ spring:
       enabled: true
 
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 jwt:
   secret: mySecretKey123456789012345678901234567890
@@ -27,4 +27,4 @@ file:
 
 logging:
   level:
-    com.plantcommunity: DEBUG
+    com.plantcom: debug
